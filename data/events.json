@@ -1,0 +1,512 @@
+{
+  "cloudStart": {
+    "log": "info",
+    "level": 1,
+    "message": "Cloud initialization started"
+  },
+  "cloudReady": {
+    "log": "info",
+    "level": 1,
+    "message": "Cloud is ready"
+  },
+  "NoRm": {
+    "log": "fatal",
+    "level": 1,
+    "message": "No resource managers exists in the database. Please insert data or run restore.js"
+  },
+  "TTSGwListen": {
+    "log": "info",
+    "level": 2,
+    "message": "Start listening TTS webhooks"
+  },
+  "uplinkReceived": {
+    "log": "info",
+    "level": 2,
+    "message": "Uplink succesfully received"
+  },
+  "joinReceived": {
+    "log": "info",
+    "level": 2,
+    "message": "Communication interface joined the network"
+  },
+  "downlinkQueued": {
+    "log": "info",
+    "level": 2,
+    "message": "Downlink added to network server queue"
+  },
+  "downlinkSent": {
+    "log": "info",
+    "level": 2,
+    "message": "Downlink succesfully sent to communication interface"
+  },
+  "downlinkJoin": {
+    "log": "info",
+    "level": 2,
+    "message": "Downlink succesfully joined from communication interface"
+  },
+  "payloadCiNotExist": {
+    "log": "error",
+    "level": 3,
+    "message": "No such communication interface found"
+  },
+  "payloadNotRelatedMc": {
+    "log": "error",
+    "level": 3,
+    "message": "No related mc found for communication interface"
+  },
+  "initDevGroupMismatch": {
+    "log": "error",
+    "level": 2,
+    "message": "The edge init message contained different devGroup id than the mc on the cloud"
+  },
+  "edgeInitRequest": {
+    "log": "info",
+    "level": 3,
+    "message": "Init request received from edge end node"
+  },
+  "edgeContinueRequest": {
+    "log": "info",
+    "level": 3,
+    "message": "Continue request received from edge end node"
+  },
+  "edgePingUplink": {
+    "log": "info",
+    "level": 3,
+    "message": "Continue request received from edge end node"
+  },
+  "edgeReportUplink": {
+    "log": "info",
+    "level": 3,
+    "message": "Report received from edge end node"
+  },
+  "rmLoadData": {
+    "log": "info",
+    "level": 3,
+    "message": "Device map, recipe, points data loaded"
+  },
+  "rmReady": {
+    "log": "info",
+    "level": 1,
+    "message": "Ready"
+  },
+  "newRmCreation": {
+    "log": "debug",
+    "level": 2,
+    "message": "New resource manager is about to created"
+  },
+  "newUser": {
+    "log": "info",
+    "level": 2,
+    "message": "New user has been created"
+  },
+  "userAuthenticated": {
+    "log": "info",
+    "level": 2,
+    "message": "User authenticated in succesfully"
+  },
+  "userNotExist": {
+    "log": "info",
+    "level": 3,
+    "message": "User does not exist"
+  },
+  "invalidUserPass": {
+    "log": "info",
+    "level": 3,
+    "message": "Password is not valid"
+  },
+  "devCtrlLoadData": {
+    "log": "info",
+    "level": 2,
+    "message": "Device tree is ready"
+  },
+  "loadRmcTree": {
+    "log": "info",
+    "level": 3,
+    "message": "Root Microcontroler loaded"
+  },
+  "loadMmcTree": {
+    "log": "info",
+    "level": 3,
+    "message": "Mesh Microcontroler loaded"
+  },
+  "rmcSubnetExist": {
+    "log": "info",
+    "level": 4,
+    "message": "Subnetwork was already exist in DB"
+  },
+  "rmcSubnetCreated": {
+    "log": "info",
+    "level": 4,
+    "message": "Subnetwork was not exist and has been created by the devGroup map"
+  },
+  "mcDevicesExist": {
+    "log": "info",
+    "level": 4,
+    "message": "Devices were already exist in DB"
+  },
+  "mcDevicesCreated": {
+    "log": "info",
+    "level": 4,
+    "message": "Devices were not exist and has been created by the devGroup map"
+  },
+  "mcNoDevicesLoaded": {
+    "log": "warn",
+    "level": 4,
+    "message": "No devices loaded"
+  },
+  "noDevGroup": {
+    "log": "error",
+    "level": 3,
+    "message": "No such device group exist in database"
+  },
+  "depsCreated": {
+    "log": "info",
+    "level": 4,
+    "message": "I/O dependencies completed"
+  },
+  "controlerStore": {
+    "log": "debug",
+    "level": 3,
+    "message": "Controlers store"
+  },
+  "deviceTree": {
+    "log": "info",
+    "level": 4,
+    "message": "Device tree"
+  },
+  "mcsDeleted": {
+    "log": "info",
+    "level": 4,
+    "message": "Microcontrolers deleted"
+  },
+  "opDeleted": {
+    "log": "info",
+    "level": 4,
+    "message": "Operation profile deleted"
+  },
+  "devicesDeleted": {
+    "log": "info",
+    "level": 4,
+    "message": "Devices deleted"
+  },
+  "cmdCreated": {
+    "log": "info",
+    "level": 3,
+    "message": "Action command has been created"
+  },
+  "cmdEnqueued": {
+    "log": "info",
+    "level": 3,
+    "message": "Command items added to communication interface queue"
+  },
+  "cmdsRouting": {
+    "log": "info",
+    "level": 4,
+    "message": "Command items routing"
+  },
+  "msgToRoute": {
+    "log": "debug",
+    "level": 4,
+    "message": "Command message for routing"
+  },
+  "downlinkRouted": {
+    "log": "info",
+    "level": 2,
+    "message": "New downlink has been routed to queue"
+  },
+  "uplinkGathered": {
+    "log": "info",
+    "level": 2,
+    "message": "New uplink has been gathered"
+  },
+  "joinGathered": {
+    "log": "info",
+    "level": 2,
+    "message": "New join has been gathered"
+  },
+  "binBufferGathered": {
+    "log": "debug",
+    "level": 3,
+    "message": "New binary buffer has been gathered"
+  },
+  "rawTextGathered": {
+    "log": "debug",
+    "level": 3,
+    "message": "New raw text has been gathered"
+  },
+  "ciHasQueue": {
+    "log": "info",
+    "level": 5,
+    "message": "Communication interface has items on queue"
+  },
+  "ciQueueShift": {
+    "log": "debug",
+    "level": 5,
+    "message": "Communication interface has shifted items from queue for routing"
+  },
+  "ciQueueTimeFault": {
+    "log": "error",
+    "level": 5,
+    "message": "Items in queue will not routed because their timestamp is not within the fault toleramnce time window"
+  },
+  "initOperationProfiles": {
+    "log": "info",
+    "level": 3,
+    "message": "Operation profiles initialized for active rmcs"
+  },
+  "opCreated": {
+    "log": "info",
+    "level": 4,
+    "message": "Operation profile has been created from scratch"
+  },
+  "opLoaded": {
+    "log": "info",
+    "level": 4,
+    "message": "Operation profile already loaded in memory"
+  },
+  "opExist": {
+    "log": "info",
+    "level": 4,
+    "message": "Operation profiles already referenced in DB"
+  },
+  "managmentModelsLoaded": {
+    "log": "info",
+    "level": 3,
+    "message": "Recipe manager models loaded"
+  },
+  "cronIntervalJobStarted": {
+    "log": "info",
+    "level": 1,
+    "message": "Job execution triggered on interval"
+  },
+  "cronStringGeneration": {
+    "log": "info",
+    "level": 4,
+    "message": "Cron string generated"
+  },
+  "recipeDepsCollected": {
+    "log": "info",
+    "level": 4,
+    "message": "Recipe dependencies have been collected"
+  },
+  "modelOutputDevices": {
+    "log": "info",
+    "level": 4,
+    "message": "Management model output devices"
+  },
+  "modelWorkOnOutputs": {
+    "log": "info",
+    "level": 3,
+    "message": "Working on output device"
+  },
+  "modelWorkOnInputs": {
+    "log": "info",
+    "level": 3,
+    "message": "Collect data from input devices"
+  },
+  "modelInputDataProcessing": {
+    "log": "info",
+    "level": 3,
+    "message": "Processes device data"
+  },
+  "modelNoDataInput": {
+    "log": "warning",
+    "level": 3,
+    "message": "No data fetched for input device"
+  },
+  "modelDataLack": {
+    "log": "warning",
+    "level": 3,
+    "message": "Model cannot decide due to lack of data"
+  },
+  "modelResponse": {
+    "log": "debug",
+    "level": 3,
+    "message": "Managment model responded"
+  },
+  "newMeasurement": {
+    "log": "info",
+    "level": 3,
+    "message": "New measurement saved"
+  },
+  "eventCompleted": {
+    "log": "info",
+    "level": 3,
+    "message": "Previously generated event completed"
+  },
+  "eventCanceled": {
+    "log": "info",
+    "level": 3,
+    "message": "Previously generated event canceled"
+  },
+  "newEvent": {
+    "log": "info",
+    "level": 3,
+    "message": "New event saved"
+  },
+  "fetchData": {
+    "log": "debug",
+    "level": 4,
+    "message": "Query to fetch data from DB"
+  },
+  "emptyDevsQuery": {
+    "log": "warn",
+    "level": 4,
+    "message": "The devices query has no ids"
+  },
+  "noDevIndex": {
+    "log": "error",
+    "level": 4,
+    "message": "Data related device has no index"
+  },
+  "reqHandlReady": {
+    "log": "info",
+    "level": 2,
+    "message": "Request handlers are ready"
+  },
+  "apiRoutReady": {
+    "log": "info",
+    "level": 2,
+    "message": "Restful api routes are ready for authorized requests"
+  },
+  "apiRequest": {
+    "log": "info",
+    "level": 4,
+    "message": "Api request"
+  },
+  "requestRmMismatch": {
+    "log": "warn",
+    "level": 3,
+    "message": "User and resource manager identifier mismatching"
+  },
+  "apiRequestError": {
+    "log": "error",
+    "level": 3,
+    "message": "Cannot handle request"
+  },
+  "socketGwListen": {
+    "log": "info",
+    "level": 2,
+    "message": "Start listening authorized web socket connections"
+  },
+  "clientConnect": {
+    "log": "info",
+    "level": 2,
+    "message": "Client connected"
+  },
+  "clientDisconnect": {
+    "log": "info",
+    "level": 2,
+    "message": "Client disconnected"
+  },
+  "clientUserAuthenticated": {
+    "log": "info",
+    "level": 3,
+    "message": "Connection request from authorized user"
+  },
+  "clientUserNonAuthenticated": {
+    "log": "warn",
+    "level": 3,
+    "message": "Connection request from unauthorized user"
+  },
+  "clientUpdate": {
+    "log": "info",
+    "level": 4,
+    "message": "Client updated with new data"
+  },
+  "socketRequest": {
+    "log": "info",
+    "level": 4,
+    "message": "Web socket request"
+  },
+  "socketResponse": {
+    "log": "info",
+    "level": 4,
+    "message": "Web socket response"
+  },
+  "socketCannotEmit": {
+    "log": "error",
+    "level": 3,
+    "message": "Cannot emit on client"
+  },
+  "protocolEncode": {
+    "log": "debug",
+    "level": 4,
+    "message": "Message is about to encode"
+  },
+  "protocolDecode": {
+    "log": "debug",
+    "level": 4,
+    "message": "Message is about to decode"
+  },
+  "binaryPreprocessed": {
+    "log": "debug",
+    "level": 4,
+    "message": "Message has been preprocessed for binary encoding"
+  },
+  "messageEncoded": {
+    "log": "info",
+    "level": 4,
+    "message": "Message has been binary encoded"
+  },
+  "messageDecoded": {
+    "log": "info",
+    "level": 4,
+    "message": "Message has been binary decoded"
+  },
+  "binaryEncodingFailed": {
+    "log": "error",
+    "level": 3,
+    "message": "Binary encoding failed"
+  },
+  "textEncodingFailed": {
+    "log": "error",
+    "level": 3,
+    "message": "Text encoding failed"
+  },
+  "textFlagMissing": {
+    "log": "error",
+    "level": 3,
+    "message": "Decode failed due to flag missing"
+  },
+  "textFlagOnly": {
+    "log": "warn",
+    "level": 3,
+    "message": "There is only the initial flag on the message"
+  },
+  "textIsPart": {
+    "log": "info",
+    "level": 5,
+    "message": "Current message is just a part"
+  },
+  "bufferEncoded": {
+    "log": "info",
+    "level": 5,
+    "message": "Buffer has been encoded"
+  },
+  "binaryMaskedValues": {
+    "log": "debug",
+    "level": 5,
+    "message": "Encoded masked values"
+  },
+  "binaryChunkMinBounds": {
+    "log": "warn",
+    "level": 4,
+    "message": "Value is out of minimum chunk bounds. The value will be minimized in bounds"
+  },
+  "binaryChunkMaxBounds": {
+    "log": "warn",
+    "level": 4,
+    "message": "Value is out of maximum chunk bounds. The value will be maximized in bounds"
+  },
+  "binaryChunkSizeExid": {
+    "log": "warn",
+    "level": 4,
+    "message": "Value is out of chunk size. The value will be maximized in bounds."
+  },
+  "binaryMaskedPadded": {
+    "log": "debug",
+    "level": 5,
+    "message": "Masked padded binaries"
+  }
+}

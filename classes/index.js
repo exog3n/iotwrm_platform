@@ -1,0 +1,15 @@
+// exports.payloadClass = require('./payload.class');
+exports.uplinkClass = require('./uplink.class');
+exports.downlinkClass = require('./downlink.class');
+exports.actuatorClass = require('./actuator.class');
+exports.sensorClass = require('./sensor.class');
+exports.pointClass = require('./point.class');
+exports.measurementClass = require('./measurement.class');
+exports.eventClass = require('./event.class');
+exports.actionClass = require('./action.class');
+exports.managementModelClass = require('./managementModel.class');
+exports.operationProfileClass = require('./operationProfile.class');
+exports.communicationInterfaceClass = require('./communicationInterface.class');
+exports.microControlerClass = require('./microControler.class');
+exports.deviceGroupClass = require('./deviceGroup.class');
+exports.protocolMessageClass = require('./protocolMessage.class');

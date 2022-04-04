@@ -1,0 +1,255 @@
+{
+  "system_config": {
+    "tasks": {
+      "irrigation": "irrigation",
+      "fertilizing": "fertilizing",
+      "supply": "supply",
+      "reporting": "reporting"
+    },
+    "specifications": {
+      "flow": "flowmeter",
+      "valve": "relay_valve",
+    },
+    "taxonomy": {
+      "t1": "olive",
+      "t2": "grapes"
+    },
+    "communication": {
+      "ttsIp": "172.21.0.10",
+      "ttsBearer": "",
+      "protocol": {
+        "payloadType": "text",
+        "flags": {
+          "operation_profile": "o",
+          "action": "a",
+          "report": "r",
+          "sync": "s",
+          "forward": "f",
+          "continue": "c",
+          "single": "s",
+          "batch": "b",
+          "time": "n",
+          "instruction": "i",
+          "measurement": "m",
+          "event": "e",
+          "trigger": "t",
+          "date": "d",
+          "init": "0",
+          "ping": "1",
+          "on": "1",
+          "off": "0",
+          "standard_block_separator": "_",
+          "single_block_separator": "s",
+          "value_separator": ";"
+        },
+        "edge":{
+          "maxPayloadSize": "50",
+          "reportsDecimalPlaces":"2",
+          "minimumUplinkInterval": "60",
+          "alive": "60000",
+          "initRetry": "60",
+          "defaultUplinkInterval": "10",
+          "actionFaultThreshold": "120",
+          "defaultDevGroup":"d",
+          "eventAckUplinkDelay":"5"
+        },
+        "binaryChunkSchemes":{
+            "cmd":{
+              "size":"8",
+              "value":["0","1","o","r","a","c"]
+            },
+            "is_part":{
+              "size":"8",
+              "value":"int"
+            },
+            "epoch":{
+              "size":"32",
+              "value":"int"
+            },
+            "device_index":{
+              "size":"8",
+              "value":"int",
+              "min":"0",
+              "max":"255"
+            },
+            "value_type":{
+              "size":"3",
+              "value":["m","e","t","p","i"]
+            },
+            "value_subvalues_number":{
+              "size":"4",
+              "value":"int",
+              "min":"0",
+              "max":"15"
+            },
+            "value_has_time_diff":{
+              "size":"1"
+            },
+            "value_minutes_diff":{
+              "size":"16",
+              "value":"int",
+              "min":"0",
+              "max":"2043"
+            },
+            "long_value_has_fraction":{
+              "size":"1"
+            },
+            "long_value_fraction":{
+              "size":"8",
+              "value":"int",
+              "min":"0",
+              "max":"99"
+            },
+            "long_value_size":{
+              "size":"6",
+              "value":"int"
+            },
+            "long_value_sign":{
+              "size":"1",
+              "value":["-","+"]
+            },
+            "long_value_base":{
+              "size":["8","16","24","32"],
+              "value":"int"
+            },
+            "boolean_value":{
+              "size":"1"
+            },
+            "report_percent_value":{
+              "size":"7",
+              "value":"int",
+              "min":"0",
+              "max":"100"
+            },
+            "action_trigger_value":{
+              "size":"8"
+            },
+            "action_percent_value":{
+              "size":"7",
+              "value":"int",
+              "min":"0",
+              "max":"100"
+            },
+            "op_io_type":{
+              "size":"2",
+              "value":["gpio","port","subnetwork"]
+            },
+            "op_io_gpio":{
+              "size":"6",
+              "value":"int",
+              "min":"0",
+              "max":"63"
+            },
+            "op_io_port":{
+              "size":"6",
+              "value":["ttyACM0","ttyS0","ttyUSB0","ttyUSB1"]
+            },
+            "op_subnetwork_network_id":{
+              "size":"8",
+              "value":"int",
+              "min":"0",
+              "max":"255"
+            },
+            "op_subnetwork_node_id":{
+              "size":"8",
+              "value":"int",
+              "min":"0",
+              "max":"255"
+            },
+            "op_subnetwork_device_id":{
+              "size":"8",
+              "value":"int"
+            },
+            "dev_code":{
+              "size":"8",
+              "value":["d","ir","mir","mth","cl","sn","snrs","rrv", "cl_legacy", "cl_debug", "cl_debug_basic", "cl_debug_mini", "mir_debug_mini"]
+            },
+            "subnetwork_node_id":{
+              "size":"8",
+              "value":"int",
+              "min":"0",
+              "max":"255"
+            },
+            "subnetwork_rwf":{
+              "size":"1"
+            },
+            "subnetwork_cmd":{
+              "size":"2",
+              "value":["battery","alive","period","device"]
+            },
+            "subnetwork_device_id":{
+              "size":"4",
+              "value":"int"
+            }
+        }
+      }
+    },
+    "logging": {
+      "services": ["ProtocolHandler"],
+      "types" :["info", "warn", "error", "fatal", "debug"],
+      "level" : 5
+    }
+  },
+  "operation_setup": {
+    "irrigation": {
+      "in": {
+        "moisture": {
+          "uSec": 240
+        },
+        "flow": {
+          "mSec": 5,
+          "uSec": 30
+        },
+        "humidity": {
+          "uSec": 30
+        },
+        "ambient_temperature": {
+          "uSec": 30
+        },
+        "water_temperature": {
+          "uSec": 240
+        },
+        "photo": {
+          "uSec": 240
+        }
+      },
+      "out": {
+        "valve": {
+          "uSec": 5
+        }
+      },
+      "forward": {
+        "bridge": {
+          "mSec": 10,
+          "uSec": 10
+        }
+      }
+    },
+    "supply": {
+      "in": {
+        "flow": {
+          "mSec": 5,
+          "uSec": 30
+        }
+      },
+      "out": {
+        "valve": {
+        }
+      }
+    },
+    "reporting": {
+      "in": {
+        "flow": {
+          "mSec": 5,
+          "uSec": 30
+        }
+      },
+      "forward": {
+        "bridge": {
+          "mSec": 10,
+          "uSec": 10
+        }
+      }
+    }
+  }
+}

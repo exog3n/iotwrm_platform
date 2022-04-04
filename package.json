@@ -1,0 +1,50 @@
+{
+  "author": "Exogen - exog3n@gmail.com",
+  "version": "2.0.0",
+  "name": "IoT water_temperature",
+  "description": "Resource  manager for virtualizing edge to the cloud.",
+  "repository": {
+    "type": "git",
+    "url": "git@github.com:mhueter/docker-node-express-boilerplate.git"
+  },
+  "main": "app/app.js",
+  "scripts": {
+    "test": "jest"
+  },
+  "license": "MIT",
+  "dependencies": {
+    "axios": "^0.21.1",
+    "bcryptjs": "^2.4.3",
+    "bitwise": "^2.1.0",
+    "bluebird": "3.7.2",
+    "dotenv": "8.2.0",
+    "express": "4.17.1",
+    "express-session": "^1.17.2",
+    "jsonschema": "1.2.5",
+    "jwt-simple": "^0.5.6",
+    "mongoose": "5.9.4",
+    "node-schedule": "^2.0.0",
+    "passport": "^0.5.2",
+    "passport-jwt": "^4.0.0",
+    "passport-local": "^1.0.0",
+    "queue": "^6.0.2",
+    "socket.io": "^4.4.1"
+  },
+  "devDependencies": {
+    "babel-eslint": "^10.1.0",
+    "babel-preset-es2017": "^6.24.1",
+    "eslint": "^7.17.0",
+    "eslint-config-airbnb-base": "^14.2.1",
+    "eslint-plugin-import": "^2.22.1",
+    "jest": "^25.1.0",
+    "jest-environment-node": "^25.1.0",
+    "jsdoc": "^3.6.6",
+    "mongodb-memory-server": "^6.3.3",
+    "supertest": "^4.0.2"
+  },
+  "jest": {
+    "globalSetup": "./config/jest/setup.js",
+    "globalTeardown": "./config/jest/teardown.js",
+    "testEnvironment": "./config/jest/MongoEnvironment.js"
+  }
+}

@@ -1,0 +1,15 @@
+exports.PointModel = require('./Point');
+exports.DeviceModel = require('./Device');
+exports.PayloadModel = require('./Payload');
+exports.DecisionModel = require('./Decision');
+exports.DeviceSpecificationModel = require('./DeviceSpecification');
+exports.CommunicationInterfaceModel = require('./CommunicationInterface');
+exports.MicroControlerModel = require('./MicroControler');
+exports.DeviceMapModel = require('./DeviceMap');
+exports.DeviceGroupModel = require('./DeviceGroup');
+exports.OperationProfileModel = require('./OperationProfile');
+exports.RecipeModel = require('./Recipe');
+exports.MeasurementModel = require('./Measurement');
+exports.EventModel = require('./Event');
+exports.UserModel = require('./User');
+exports.ResourceManagerModel = require('./ResourceManager');
